@@ -30,7 +30,6 @@ public class ActividadMenu extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.imgPoda:
                 Toast.makeText(this, "OPCION NO CONFIGURADA", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "CherryNote", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.imgFito:
                 Toast.makeText(this, "OPCION NO CONFIGURADA", Toast.LENGTH_SHORT).show();
