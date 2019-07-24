@@ -29,7 +29,7 @@ public class ActividadMenu extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(this,ActividadEscandallos.class));
                 break;
             case R.id.imgPoda:
-                Toast.makeText(this, "OPCION NO CONFIGURADA", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,ActividadCuras.class));
                 break;
             case R.id.imgFito:
                 Toast.makeText(this, "OPCION NO CONFIGURADA", Toast.LENGTH_SHORT).show();

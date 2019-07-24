@@ -24,7 +24,8 @@
         <activity android:name=".ActividadEscandallos" />
         <activity android:name=".ActividadResultadosEscandallo" />
         <activity android:name=".ActividadMenu" />
-        <activity android:name=".ActividadCuras"></activity>
+        <activity android:name=".ActividadCuras" />
+        <activity android:name=".ActividadPrecios"></activity>
     </application>
 
 </manifest>
