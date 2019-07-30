@@ -111,7 +111,7 @@ public class Precios {
     @Override
     public String toString() {
         return "Precios{" +
-                "almacen='" + almacen + '\'' +
+                "almacen='" + almacen.getNombre() + '\'' +
                 ", fecha=" + fecha +
                 ", precio30=" + precio30 +
                 ", precio28=" + precio28 +

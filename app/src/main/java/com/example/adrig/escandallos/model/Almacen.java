@@ -1,5 +1,9 @@
 package com.example.adrig.escandallos.model;
 
+
+import android.os.Build;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Almacen {
@@ -34,6 +38,22 @@ public class Almacen {
         this.precios = _precios;
     }
 
+    /**
+     * Metodo que devuelve los precios del ultimo dia del almacen
+     * @return
+     */
+    @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.O)
+    public Precios verPreciosUltimoDia(){
+        LocalDate ultimaFecha = LocalDate.of(0,0,0);
+        Precios ultimoPrecio = null;
+        for (int i = 0; i < precios.size();i++){
+            if (precios.get(i).getFecha().isAfter(ultimaFecha) ){
+                ultimaFecha = precios.get(i).getFecha();
+            }
+            ultimoPrecio = precios.get(i);
+        }
+        return (ultimoPrecio.getFecha() == ultimaFecha ? ultimoPrecio : null);
+    }
     @Override
     public String toString() {
         return "Almacen{" +

@@ -23,14 +23,12 @@ public class Escandallo{
      * @param _kg26
      * @param _kg24
      * @param _kg22
-     * @param _precios
+     *
      */
-    public Escandallo(String _codigo, Parcela _parcela,
-                      float _kg30,float _kg28, float _kg26, float _kg24, float _kg22,
-                      Precios _precios){
+    public Escandallo(String _codigo, Parcela _parcela,Almacen _almacen
+                      ,float _kg30,float _kg28, float _kg26, float _kg24, float _kg22){
         this.codigo = _codigo;
-        this.precios = _precios;
-        this.almacen = this.precios.getAlmacen();
+        this.almacen = _almacen;
         this.parcela = _parcela;
         this.kg30 = _kg30;
         this.kg28 = _kg28;
@@ -45,7 +43,7 @@ public class Escandallo{
      * @param _pesosCalibre
      * @param _preciosCalibre
      */
-    public  Escandallo(Object _referencias[], ArrayList<Float> _pesosCalibre, ArrayList<Float> _preciosCalibre){
+    public Escandallo(Object _referencias[], ArrayList<Float> _pesosCalibre, ArrayList<Float> _preciosCalibre){
         if (_referencias.length == 3 && (_pesosCalibre.size() == _preciosCalibre.size())){
             this.codigo = (String) _referencias[0];
             this.almacen = (Almacen) _referencias[1];
@@ -172,13 +170,17 @@ public class Escandallo{
                 '}':
                 "Escandallo{" +
                 "codigo='" + codigo + '\'' +
-                ", almacen='" + almacen + '\'' +
-                ", parcela='" + parcela + '\'' +
+                ", almacen='" + almacen.getNombre() + '\'' +
+                ", parcela='" + parcela.getNombre() + '\'' +
                 ", kg30=" + kg30 +
                 ", kg28=" + kg28 +
                 ", kg26=" + kg26 +
                 ", kg24=" + kg24 +
                 precios.mostrarPrecios()+
                 '}');
+    }
+
+    public void setPrecios(Precios precios) {
+        this.precios = precios;
     }
 }

@@ -60,7 +60,7 @@ public class Parcela {
     @Override
     public String toString() {
         return "Parcela{" +
-                "propietario=" + propietario +
+                "propietario=" + propietario.getAlias() +
                 ", nombre='" + nombre + '\'' +
                 ", latitud=" + latitud +
                 ", longitud=" + longitud +
