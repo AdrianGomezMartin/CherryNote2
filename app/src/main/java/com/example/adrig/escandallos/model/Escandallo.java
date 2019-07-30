@@ -23,18 +23,19 @@ public class Escandallo{
      * @param _kg22
      * @param _precios
      */
-    public Escandallo(String _codigo, String _almacen, String _parcela,
+    public Escandallo(String _codigo, String _parcela,
                       float _kg30,float _kg28, float _kg26, float _kg24, float _kg22,
                       Precios _precios){
         this.codigo = _codigo;
-        this.almacen = _almacen;
+        this.precios = _precios;
+        this.almacen = this.precios.getAlmacen();
         this.parcela = _parcela;
         this.kg30 = _kg30;
         this.kg28 = _kg28;
         this.kg26 = _kg26;
         this.kg24 = _kg24;
         this.kg26 = _kg22;
-        this.precios = _precios;
+
     }
     /**
      * Constructor que crea un Escandallo a partir de 3 listas con las referencias [codigo,almacen,parcela] los pesos y los precios (ordenados de mayor calibre a menor)
