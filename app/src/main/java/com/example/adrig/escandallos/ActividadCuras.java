@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class ActividadCuras extends AppCompatActivity implements View.OnClickListener{
     ImageButton imgCuras,imgAbonos;
@@ -21,8 +22,10 @@ public class ActividadCuras extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.imgFito2:
+                Toast.makeText(this, "Hacer Gestion Productos Fitosanitarios", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.imaAbono:
+                Toast.makeText(this, "Hacer Gestión Abonos", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
