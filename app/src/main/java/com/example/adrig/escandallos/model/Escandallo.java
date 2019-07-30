@@ -159,8 +159,8 @@ public class Escandallo{
         return ( precios.getPrecio22() != 0 && kg22 != null ?
                 "Escandallo{" +
                 "codigo='" + codigo + '\'' +
-                ", almacen='" + almacen + '\'' +
-                ", parcela='" + parcela + '\'' +
+                ", almacen='" + almacen.getNombre() + '\'' +
+                ", parcela='" + parcela.getNombre() + '\'' +
                 ", kg30=" + kg30 +
                 ", kg28=" + kg28 +
                 ", kg26=" + kg26 +
