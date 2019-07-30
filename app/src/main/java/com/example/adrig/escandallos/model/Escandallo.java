@@ -3,18 +3,20 @@ package com.example.adrig.escandallos.model;
 import java.util.ArrayList;
 
 public class Escandallo{
-    private String codigo,almacen,parcela;
+    private String codigo;
+    private Almacen almacen;
+    private Parcela parcela;
     private Float kg30,kg28,kg26,kg24,kg22;
-    private Precios precios;    /**
+    private Precios precios;
+    /**
      * Constructor por defecto
-      */
+     */
     public Escandallo(){
 
     }
     /**
      * Constructor con todos los calibres y su precio
      * @param _codigo
-     * @param _almacen
      * @param _parcela
      * @param _kg30
      * @param _kg28
@@ -23,7 +25,7 @@ public class Escandallo{
      * @param _kg22
      * @param _precios
      */
-    public Escandallo(String _codigo, String _parcela,
+    public Escandallo(String _codigo, Parcela _parcela,
                       float _kg30,float _kg28, float _kg26, float _kg24, float _kg22,
                       Precios _precios){
         this.codigo = _codigo;
@@ -39,36 +41,36 @@ public class Escandallo{
     }
     /**
      * Constructor que crea un Escandallo a partir de 3 listas con las referencias [codigo,almacen,parcela] los pesos y los precios (ordenados de mayor calibre a menor)
-     * @param referencias
-     * @param pesosCalibre
-     * @param preciosCalibre
+     * @param _referencias
+     * @param _pesosCalibre
+     * @param _preciosCalibre
      */
-    public  Escandallo(String referencias[], ArrayList<Float> pesosCalibre, ArrayList<Float> preciosCalibre){
-        if (referencias.length == 3 && (pesosCalibre.size() == preciosCalibre.size())){
-            this.codigo = referencias[0];
-            this.almacen = referencias[1];
-            this.parcela = referencias[2];
-            for (int i = 0; i < pesosCalibre.size(); i++){
+    public  Escandallo(Object _referencias[], ArrayList<Float> _pesosCalibre, ArrayList<Float> _preciosCalibre){
+        if (_referencias.length == 3 && (_pesosCalibre.size() == _preciosCalibre.size())){
+            this.codigo = (String) _referencias[0];
+            this.almacen = (Almacen) _referencias[1];
+            this.parcela = (Parcela)_referencias[2];
+            for (int i = 0; i < _pesosCalibre.size(); i++){
                 switch (i){
                     case 0 :
-                        this.kg30 = pesosCalibre.get(i);
-                        this.precios.setPrecio30(preciosCalibre.get(i));
+                        this.kg30 = _pesosCalibre.get(i);
+                        this.precios.setPrecio30(_preciosCalibre.get(i));
                         break;
                     case 1 :
-                        this.kg28 = pesosCalibre.get(i);
-                        this.precios.setPrecio28(preciosCalibre.get(i));
+                        this.kg28 = _pesosCalibre.get(i);
+                        this.precios.setPrecio28(_preciosCalibre.get(i));
                         break;
                     case 2 :
-                        this.kg26 = pesosCalibre.get(i);
-                        this.precios.setPrecio26(preciosCalibre.get(i));
+                        this.kg26 = _pesosCalibre.get(i);
+                        this.precios.setPrecio26(_preciosCalibre.get(i));
                         break;
                     case 3 :
-                        this.kg24 = pesosCalibre.get(i);
-                        this.precios.setPrecio24(preciosCalibre.get(i));
+                        this.kg24 = _pesosCalibre.get(i);
+                        this.precios.setPrecio24(_preciosCalibre.get(i));
                         break;
                     case 4 :
-                        this.kg22 = pesosCalibre.get(i);
-                        this.precios.setPrecio22(preciosCalibre.get(i));
+                        this.kg22 = _pesosCalibre.get(i);
+                        this.precios.setPrecio22(_preciosCalibre.get(i));
                         break;
                 }
             }
@@ -84,19 +86,19 @@ public class Escandallo{
         this.codigo = codigo;
     }
 
-    public String getAlmacen() {
+    public Almacen getAlmacen() {
         return almacen;
     }
 
-    public void setAlmacen(String almacen) {
+    public void setAlmacen(Almacen almacen) {
         this.almacen = almacen;
     }
 
-    public String getParcela() {
+    public Parcela getParcela() {
         return parcela;
     }
 
-    public void setParcela(String parcela) {
+    public void setParcela(Parcela parcela) {
         this.parcela = parcela;
     }
 
@@ -141,7 +143,10 @@ public class Escandallo{
     }
 
 
-
+    /**
+     * Metodo que devuelve el total del escandallo
+     * @return total
+     */
     public float obtenerTotal(){
         float euros30 = precios.getPrecio30() * kg30,
                 euros28 = precios.getPrecio28() * kg28,
