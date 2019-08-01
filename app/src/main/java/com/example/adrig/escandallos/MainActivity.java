@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         edtPaswd = findViewById(R.id.edtPswd);
         btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener((e)->{
+       /* btnLogin.setOnClickListener((e)->{
             if (comprobarCamposLlenos()){
                 String  user = "" , password = "";
                 user =  edtEmail.getText().toString();
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "ERROR "+user+"  "+" "+password, Toast.LENGTH_SHORT).show();
             }
         });
+        */
     }
     private  boolean comprobarCamposLlenos(){
         return edtEmail.getText().toString() != null && edtPaswd.getText().toString() != null;

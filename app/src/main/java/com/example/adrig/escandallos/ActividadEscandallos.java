@@ -19,7 +19,7 @@ public class ActividadEscandallos extends AppCompatActivity {
         nmb24 = findViewById(R.id.nmb24);
         btnCalcularEscandallo = findViewById(R.id.btnCalcularEscandallo);
         rellenarCamposNulos();
-        btnCalcularEscandallo.setOnClickListener((e)->{
+        /*btnCalcularEscandallo.setOnClickListener((e)->{
             float valor30 = nmb30.getText().toString() != null ? Float.parseFloat(nmb30.getText().toString()) : 0f;
             float valor28 = nmb28.getText().toString() != null ? Float.parseFloat(nmb28.getText().toString()) : 0f;
             float valor26 = nmb26.getText().toString() != null ? Float.parseFloat(nmb26.getText().toString()) : 0f;
@@ -31,7 +31,7 @@ public class ActividadEscandallos extends AppCompatActivity {
             intentResultado.putExtra("valor26",valor26);
             intentResultado.putExtra("valor24",valor24);
             startActivity(intentResultado);
-        });
+        });*/
     }
 
     private void rellenarCamposNulos(){
