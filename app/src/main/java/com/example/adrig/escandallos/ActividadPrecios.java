@@ -35,6 +35,9 @@ public class ActividadPrecios extends AppCompatActivity {
                 , precio22 = (edt22.getText().toString() != null ? Float.parseFloat(edt22.getText().toString()) : 0f);
         Almacen almacen = new Almacen("GRUPO ALBA");
         Precios precioNuevo = new Precios(almacen, LocalDate.now(),precio30,precio28,precio26,precio24,precio22);
-        Toast.makeText(this, (CharSequence) precioNuevo, Toast.LENGTH_SHORT).show();
+        btnIngresar.setOnClickListener(e->{
+            Toast.makeText(this, (CharSequence) precioNuevo, Toast.LENGTH_SHORT).show();
+        });
+
     }
 }
