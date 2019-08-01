@@ -14,6 +14,7 @@ import com.example.adrig.escandallos.model.Precios;
 
 import java.time.LocalDate;
 
+//iepa gente
 public class ActividadPrecios extends AppCompatActivity {
     EditText edt30 ,edt28 ,edt26 , edt24, edt22;
     Button btnIngresar;
