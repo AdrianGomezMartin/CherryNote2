@@ -25,4 +25,6 @@
     <string name="txtTituloLogin">INICIO DE SESION</string>
     <string name="btnLogin">INICIAR SESIÖN</string>
     <string name="txtTituloPrecios">Inserte los precios por calibre e incluye el almacén al que pertenece</string>
+    <string name="txt22">22+</string>
+    <string name="btnIngresar">AÑADIR</string>
 </resources>

@@ -9,6 +9,10 @@ public class Parcela {
     public Parcela() {
     }
 
+    public Parcela(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Parcela(Usuario _propietario, String _nombre, double _latitud, double _longitud, int _m2) {
         this.propietario = _propietario;
         this.nombre = _nombre;
