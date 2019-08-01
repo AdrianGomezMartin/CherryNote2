@@ -110,7 +110,7 @@ public class Precios {
 
     @Override
     public String toString() {
-        return "Precios{" +
+        return (this.precio22 != 0 ?"Precios{" +
                 "almacen='" + almacen.getNombre() + '\'' +
                 ", fecha=" + fecha +
                 ", precio30=" + precio30 +
@@ -118,6 +118,14 @@ public class Precios {
                 ", precio26=" + precio26 +
                 ", precio24=" + precio24 +
                 ", precio22=" + precio22 +
-                '}';
+                '}':
+                "Precios{" +
+                "almacen='" + almacen.getNombre() + '\'' +
+                ", fecha=" + fecha +
+                ", precio30=" + precio30 +
+                ", precio28=" + precio28 +
+                ", precio26=" + precio26 +
+                ", precio24=" + precio24 +
+                '}');
     }
 }

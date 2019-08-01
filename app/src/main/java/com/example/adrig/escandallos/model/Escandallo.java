@@ -6,7 +6,7 @@ public class Escandallo{
     private String codigo;
     private Almacen almacen;
     private Parcela parcela;
-    private Float kg30,kg28,kg26,kg24,kg22;
+    private Float kg30 ,kg28 ,kg26 ,kg24 ,kg22;
     private Precios precios;
     /**
      * Constructor por defecto
@@ -140,6 +140,9 @@ public class Escandallo{
         this.kg22 = kg22;
     }
 
+    public void setPrecios(Precios precios) {
+        this.precios = precios;
+    }
 
     /**
      * Metodo que devuelve el total del escandallo
@@ -180,7 +183,5 @@ public class Escandallo{
                 '}');
     }
 
-    public void setPrecios(Precios precios) {
-        this.precios = precios;
-    }
+
 }
